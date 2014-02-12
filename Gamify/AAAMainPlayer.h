@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AAAMainPlayer : NSObject
+@interface AAAMainPlayer : NSObject<NSCoding>
 
 @end

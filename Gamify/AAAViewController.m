@@ -9,6 +9,8 @@
 #import "AAAViewController.h"
 
 @interface AAAViewController ()
+- (IBAction)didTapAddScoreButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *addScoreTextField;
 
 @end
 
@@ -26,4 +28,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)didTapAddScoreButton:(id)sender {
+    [self.addScoreTextField resignFirstResponder];
+}
 @end
