@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+#import "AAAScoreView.h"
 @interface AAAGamificationManager : NSObject
 
+@property (nonatomic,weak) AAAScoreView *scoreView;
+
++ (AAAGamificationManager *)sharedManager;
+- (void)addToMainPlayersScore:(NSInteger)score;
 @end

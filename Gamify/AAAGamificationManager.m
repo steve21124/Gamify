@@ -7,7 +7,23 @@
 //
 
 #import "AAAGamificationManager.h"
-
+@interface AAAGamificationManager ()
+@end
 @implementation AAAGamificationManager
+
++ (AAAGamificationManager *)sharedManager {
+    static AAAGamificationManager *_sharedManager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _sharedManager = [[AAAGamificationManager alloc] init];
+    });
+    
+    return _sharedManager;
+}
+
+- (void)addToMainPlayersScore:(NSInteger)score
+{
+    
+}
 
 @end
