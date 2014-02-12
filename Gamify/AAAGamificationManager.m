@@ -23,7 +23,9 @@
 
 - (void)addToMainPlayersScore:(NSInteger)score
 {
-    
+    if ([self.scoreView respondsToSelector:@selector(setScoreTo:scoreChange:)]) {
+        [self.scoreView setScoreTo:score scoreChange:4];
+    }
 }
 
 @end

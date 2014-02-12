@@ -7,7 +7,7 @@
 //
 
 #import "AAAViewController.h"
-
+#import "AAAGamificationManager.h"
 @interface AAAViewController ()
 - (IBAction)didTapAddScoreButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *addScoreTextField;
@@ -29,6 +29,8 @@
 }
 
 - (IBAction)didTapAddScoreButton:(id)sender {
+    NSInteger scoreToSet = self.addScoreTextField.text.integerValue;
+    [[AAAGamificationManager sharedManager] addToMainPlayersScore:scoreToSet];
     [self.addScoreTextField resignFirstResponder];
 }
 @end
