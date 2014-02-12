@@ -10,4 +10,12 @@
 
 @interface AAAScoreView : UIView
 
+@property (nonatomic,strong) UILabel *scoreLabel;
+@property (nonatomic,strong) UILabel *scoreChangeLabel;
+
+- (void)show;
+- (void)hide;
+
+- (void)setScoreTo:(NSInteger) score scoreChange:(NSInteger) change;
+
 @end
