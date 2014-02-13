@@ -133,7 +133,7 @@ const NSString  *kScoreToSetKey = @"scoreToSetKey";
     [self removeConstraints:self.scoreChangeLabel.constraints];
     self.scoreChangeLabel.alpha = 0;
     __block NSLayoutConstraint *newYpositionConstraint;
-    [UIView animateWithDuration:0.8 animations:^{
+    [UIView animateWithDuration:0.6 animations:^{
         self.scoreChangeLabel.alpha = 1;
         [self  removeConstraint:self.scoreChangeYConstraint];
     
@@ -143,14 +143,14 @@ const NSString  *kScoreToSetKey = @"scoreToSetKey";
                                                                                      toItem:self
                                                                                   attribute:NSLayoutAttributeTop
                                                                                  multiplier:1.0
-                                                                                   constant:-30.0];
+                                                                                   constant:-25.0];
         
         [self addConstraint:newYpositionConstraint];
         [self layoutSubviews];
         
     } completion:^(BOOL finished) {
 
-    [UIView animateWithDuration:0.3 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{
         
         self.scoreChangeLabel.alpha = 0;
 
