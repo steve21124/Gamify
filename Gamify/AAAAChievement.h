@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AAAAChievement : NSObject
+@interface AAAAchievement : NSObject
 
+@property (nonatomic,strong, readonly) NSString   *key;
+@property (nonatomic,strong, readonly) NSString   *titleText;
+@property (nonatomic,strong, readonly) NSString   *descriptionText;
+@property (nonatomic,strong, readonly) UIImage    *image;
+
+- (AAAAchievement*)initWithKey:(NSString *)key titleText:(NSString*)titleText descriptionText:(NSString*)descriptionText image:(UIImage*)image;
 @end

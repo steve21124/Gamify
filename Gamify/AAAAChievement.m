@@ -6,8 +6,17 @@
 //  Copyright (c) 2014 Haaakon Bogen. All rights reserved.
 //
 
-#import "AAAAChievement.h"
+#import "AAAAchievement.h"
 
-@implementation AAAAChievement
-
+@implementation AAAAchievement
+- (AAAAchievement*)initWithKey:(NSString *)key titleText:(NSString*)titleText descriptionText:(NSString*)descriptionText image:(UIImage*)image{
+    self = [super init];
+    if (self ){
+        _key = key;
+        _titleText = titleText;
+        _descriptionText = descriptionText;
+        _image = image;
+    }
+    return self;
+}
 @end
