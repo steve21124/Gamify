@@ -33,6 +33,7 @@
     NSInteger scoreToSet = self.addScoreTextField.text.integerValue;
     [[AAAGamificationManager sharedManager] setMainPlayersScore:scoreToSet];
     [self.addScoreTextField resignFirstResponder];
+    [[AAAGamificationManager sharedManager] showAchievementViewControllerOnViewController:self withAchievement:nil];
 }
 
 - (IBAction)didTapAddToScoreButton:(id)sender {

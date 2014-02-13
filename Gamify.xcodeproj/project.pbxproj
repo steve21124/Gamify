@@ -27,6 +27,7 @@
 		EC4AF85018AC1C54006BE661 /* AAAScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4AF84F18AC1C54006BE661 /* AAAScoreViewController.m */; };
 		EC4AF85318AC2011006BE661 /* AAAMainPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4AF85218AC2011006BE661 /* AAAMainPlayer.m */; };
 		ECA9763D18AD6A4100703BB3 /* AAAAChievement.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA9763C18AD6A4100703BB3 /* AAAAChievement.m */; };
+		ECA9764018AD705200703BB3 /* AAAAchievmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA9763F18AD705200703BB3 /* AAAAchievmentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		EC4AF85218AC2011006BE661 /* AAAMainPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAAMainPlayer.m; path = Gamify/AAAMainPlayer.m; sourceTree = "<group>"; };
 		ECA9763B18AD6A4100703BB3 /* AAAAChievement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAAAChievement.h; path = Gamify/AAAAChievement.h; sourceTree = "<group>"; };
 		ECA9763C18AD6A4100703BB3 /* AAAAChievement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAAAChievement.m; path = Gamify/AAAAChievement.m; sourceTree = "<group>"; };
+		ECA9763E18AD705200703BB3 /* AAAAchievmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAAAchievmentViewController.h; path = Gamify/AAAAchievmentViewController.h; sourceTree = "<group>"; };
+		ECA9763F18AD705200703BB3 /* AAAAchievmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAAAchievmentViewController.m; path = Gamify/AAAAchievmentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 				EC4AF84F18AC1C54006BE661 /* AAAScoreViewController.m */,
 				EC4AF84818AC1B58006BE661 /* AAAScoreView.h */,
 				EC4AF84918AC1B58006BE661 /* AAAScoreView.m */,
+				ECA9763E18AD705200703BB3 /* AAAAchievmentViewController.h */,
+				ECA9763F18AD705200703BB3 /* AAAAchievmentViewController.m */,
 				EC4AF84B18AC1BAE006BE661 /* AAAGamificationManager.h */,
 				EC4AF84C18AC1BAE006BE661 /* AAAGamificationManager.m */,
 				EC4AF85118AC2011006BE661 /* AAAMainPlayer.h */,
@@ -287,6 +292,7 @@
 				EC4AF84D18AC1BAE006BE661 /* AAAGamificationManager.m in Sources */,
 				EC4AF84A18AC1B58006BE661 /* AAAScoreView.m in Sources */,
 				EC4AF85018AC1C54006BE661 /* AAAScoreViewController.m in Sources */,
+				ECA9764018AD705200703BB3 /* AAAAchievmentViewController.m in Sources */,
 				ECA9763D18AD6A4100703BB3 /* AAAAChievement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
