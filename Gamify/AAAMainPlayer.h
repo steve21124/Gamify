@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface AAAMainPlayer : NSObject<NSCoding>
-
+@property (nonatomic,strong) NSString *playerName;
+@property (nonatomic) NSInteger playerScore;
 @end

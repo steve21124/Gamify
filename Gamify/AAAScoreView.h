@@ -15,6 +15,7 @@
 
 - (void)show;
 - (void)hide;
+- (void)setScoreLabelColor:(UIColor*)color;
 
 - (void)setScoreTo:(NSInteger) score scoreChange:(NSInteger) change;
 
