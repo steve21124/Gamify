@@ -7,8 +7,12 @@
 //
 
 #import "AAAViewController.h"
-
+#import "AAAGamificationManager.h"
 @interface AAAViewController ()
+- (IBAction)didTapSetScoreButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *addScoreButton;
+- (IBAction)didTapAddToScoreButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *addScoreTextField;
 
 @end
 
@@ -17,7 +21,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning
@@ -26,4 +29,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)didTapSetScoreButton:(id)sender {
+    NSInteger scoreToSet = self.addScoreTextField.text.integerValue;
+    [[AAAGamificationManager sharedManager] setMainPlayersScore:scoreToSet];
+    [self.addScoreTextField resignFirstResponder];
+}
+- (IBAction)didTapAddToScoreButton:(id)sender {
+    NSInteger scoreToSet = self.addScoreTextField.text.integerValue;
+    [[AAAGamificationManager sharedManager] addToMainPlayerScore:scoreToSet];
+    [self.addScoreTextField resignFirstResponder];
+}
 @end
