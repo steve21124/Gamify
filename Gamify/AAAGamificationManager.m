@@ -29,10 +29,12 @@
 {
     return [[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingString:@"/score"];
 }
+
 - (void)setScoreView:(AAAScoreView *)scoreView
 {
     _scoreView = scoreView;
-    [scoreView setScoreTo:self.mainPlayer.playerScore scoreChange:0];
+    _scoreView.scoreLabel.text = [NSString stringWithFormat:@"%d",self.mainPlayer.playerScore];
+//    [self initialSetScoreNoAnimation];
 }
 
 - (void)loadMainPlayer {
@@ -65,6 +67,13 @@
 - (NSInteger)mainPlayerScore
 {
     return self.mainPlayer.playerScore;
+}
+
+- (void)initialSetScoreNoAnimation
+{
+    if ([self.scoreView respondsToSelector:@selector(setScoreWithoutAnimation:)]) {
+        [self.scoreView setScoreWithoutAnimation:self.mainPlayer.playerScore];
+    }
 }
 
 - (void)setMainPlayersScore:(NSInteger)score

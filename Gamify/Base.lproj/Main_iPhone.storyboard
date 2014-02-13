@@ -19,7 +19,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zks-sS-ASO" customClass="AAAScoreView">
                                 <rect key="frame" x="130" y="130" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.87843137250000003" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.0" green="0.53333333329999999" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="0dl-eo-nHe"/>
@@ -66,7 +66,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.8784313725490196" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ex7-pG-uYA" firstAttribute="leading" secondItem="zks-sS-ASO" secondAttribute="leading" constant="-94" id="9vm-OV-gx9"/>
                             <constraint firstItem="7K1-q7-ITz" firstAttribute="leading" secondItem="k6g-7b-cCC" secondAttribute="trailing" constant="8" symbolic="YES" id="A7a-XY-VSk"/>

@@ -34,6 +34,7 @@
     [[AAAGamificationManager sharedManager] setMainPlayersScore:scoreToSet];
     [self.addScoreTextField resignFirstResponder];
 }
+
 - (IBAction)didTapAddToScoreButton:(id)sender {
     NSInteger scoreToSet = self.addScoreTextField.text.integerValue;
     [[AAAGamificationManager sharedManager] addToMainPlayerScore:scoreToSet];

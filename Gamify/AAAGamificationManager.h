@@ -14,6 +14,7 @@
 @property (nonatomic,weak) AAAScoreView *scoreView;
 
 + (AAAGamificationManager *)sharedManager;
+- (void)initialSetScoreNoAnimation;
 - (void)setMainPlayersScore:(NSInteger)score;
 - (void)addToMainPlayerScore:(NSInteger)score;
 - (NSInteger)mainPlayerScore;
