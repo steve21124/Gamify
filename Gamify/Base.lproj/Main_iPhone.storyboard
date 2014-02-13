@@ -35,52 +35,41 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="didTapAddScoreButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Bf5-o4-BdL"/>
+                                    <action selector="didTapSetScoreButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kcN-K3-7VO"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7K1-q7-ITz">
-                                <rect key="frame" x="150" y="20" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7K1-q7-ITz">
+                                <rect key="frame" x="150" y="20" width="97" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znC-f0-y1n">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znC-f0-y1n">
                                 <rect key="frame" x="85" y="58" width="57" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="didTapAddScoreButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RgZ-45-evw"/>
+                                    <action selector="didTapAddToScoreButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jf7-Pr-XDq"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bxk-F1-x5n">
-                                <rect key="frame" x="150" y="58" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7K1-q7-ITz" firstAttribute="leading" secondItem="Bxk-F1-x5n" secondAttribute="leading" id="7Ld-rM-UJI"/>
                             <constraint firstItem="7K1-q7-ITz" firstAttribute="leading" secondItem="k6g-7b-cCC" secondAttribute="trailing" constant="8" symbolic="YES" id="A7a-XY-VSk"/>
-                            <constraint firstItem="znC-f0-y1n" firstAttribute="bottom" secondItem="Bxk-F1-x5n" secondAttribute="bottom" id="Hg8-MI-0A2"/>
-                            <constraint firstItem="Bxk-F1-x5n" firstAttribute="top" secondItem="7K1-q7-ITz" secondAttribute="bottom" constant="8" symbolic="YES" id="Kdr-1C-FHI"/>
                             <constraint firstItem="zks-sS-ASO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="120" id="RT9-ez-09h"/>
                             <constraint firstItem="k6g-7b-cCC" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="20" symbolic="YES" id="SgX-Ay-Aqa"/>
                             <constraint firstItem="k6g-7b-cCC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="85" id="Slt-Ol-zjF"/>
                             <constraint firstItem="znC-f0-y1n" firstAttribute="top" secondItem="k6g-7b-cCC" secondAttribute="bottom" constant="8" symbolic="YES" id="WDW-fV-a6R"/>
                             <constraint firstItem="znC-f0-y1n" firstAttribute="leading" secondItem="k6g-7b-cCC" secondAttribute="leading" id="X9Q-WY-lHl"/>
-                            <constraint firstItem="Bxk-F1-x5n" firstAttribute="trailing" secondItem="7K1-q7-ITz" secondAttribute="trailing" id="ahr-Zu-mld"/>
                             <constraint firstAttribute="trailing" secondItem="7K1-q7-ITz" secondAttribute="trailing" constant="73" id="bZp-Mb-WOb"/>
                             <constraint firstItem="7K1-q7-ITz" firstAttribute="top" secondItem="k6g-7b-cCC" secondAttribute="top" id="boo-w0-IBT"/>
-                            <constraint firstItem="Bxk-F1-x5n" firstAttribute="leading" secondItem="znC-f0-y1n" secondAttribute="trailing" constant="8" symbolic="YES" id="eWO-h3-xWG"/>
-                            <constraint firstItem="Bxk-F1-x5n" firstAttribute="top" secondItem="znC-f0-y1n" secondAttribute="top" id="foV-3n-8OV"/>
                             <constraint firstItem="zks-sS-ASO" firstAttribute="top" secondItem="PoC-GR-MaC" secondAttribute="bottom" constant="170" id="paf-ES-MSY"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addScoreButton" destination="znC-f0-y1n" id="bJn-iN-PuQ"/>
                         <outlet property="addScoreTextField" destination="7K1-q7-ITz" id="qzT-Sf-0Al"/>
                     </connections>
                 </viewController>

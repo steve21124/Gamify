@@ -68,7 +68,7 @@
     return self.mainPlayer.playerScore;
 }
 
-- (void)addToMainPlayersScore:(NSInteger)score
+- (void)setMainPlayersScore:(NSInteger)score
 {
     NSInteger oldScore = self.mainPlayer.playerScore;
     self.mainPlayer.playerScore = score;
@@ -76,6 +76,17 @@
     if ([self.scoreView respondsToSelector:@selector(setScoreTo:scoreChange:)]) {
         [self.scoreView setScoreTo:score scoreChange: score - oldScore ];
     }
+    [self saveMainPlayerData];
+}
+
+- (void)addToMainPlayerScore:(NSInteger)score
+{
+    NSInteger oldScore = self.mainPlayer.playerScore;
+    
+    if ([self.scoreView respondsToSelector:@selector(setScoreTo:scoreChange:)]) {
+        [self.scoreView setScoreTo:score + oldScore scoreChange: score ];
+    }
+    self.mainPlayer.playerScore = score + oldScore;
     [self saveMainPlayerData];
 }
 
