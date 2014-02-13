@@ -15,4 +15,5 @@
 
 + (AAAGamificationManager *)sharedManager;
 - (void)addToMainPlayersScore:(NSInteger)score;
+- (NSInteger)mainPlayerScore;
 @end
