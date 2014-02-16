@@ -10,6 +10,10 @@
 
 @interface AAAAchievmentViewController ()
 
+@property (nonatomic,strong ) UILabel *playerUnlockedAchievementLabel;
+@property (nonatomic,strong ) UILabel *titleLabel;
+@property (nonatomic,strong ) UILabel *descriptionLabel;
+@property (nonatomic,strong ) UIImageView *imageView;
 @end
 
 @implementation AAAAchievmentViewController
@@ -27,9 +31,163 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    [self performSelector:@selector(closeViewController) withObject:nil afterDelay:1];
+    [self performSelector:@selector(closeViewController) withObject:nil afterDelay:2.2];
+    
+    self.playerUnlockedAchievementLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    [self.view addSubview:self.playerUnlockedAchievementLabel];
+    self.playerUnlockedAchievementLabel.text = @"Achievement unlocked";
+//    [self.playerUnlockedAchievementLabel setTextAlignment:NSTextAlignmentCenter];
+    [self.playerUnlockedAchievementLabel setTextColor:RGB(106, 105, 103)];
+    [self.playerUnlockedAchievementLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.playerUnlockedAchievementLabel
+                                                          attribute:NSLayoutAttributeTop
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeTop
+                                                         multiplier:1.0
+                                                           constant:30.0]];
+    
+    [self.playerUnlockedAchievementLabel addConstraint:[NSLayoutConstraint constraintWithItem:self.playerUnlockedAchievementLabel
+                                                                attribute:NSLayoutAttributeWidth
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:nil
+                                                                attribute:NSLayoutAttributeNotAnAttribute
+                                                               multiplier:1.0
+                                                                 constant:250.0]];
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.playerUnlockedAchievementLabel
+                                                          attribute:NSLayoutAttributeCenterX
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeCenterX
+                                                         multiplier:1.0
+                                                           constant:0.0]];
+    
+    
+    
+    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    [self.view addSubview:self.titleLabel];
+    self.titleLabel.text = self.achievement.titleText;
+    [self.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:35]];
+    [self.titleLabel setNumberOfLines:0];
+    [self.titleLabel setTranslatesAutoresizingMaskIntoConstraints: NO];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.titleLabel
+                                                          attribute:NSLayoutAttributeTop
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.playerUnlockedAchievementLabel
+                                                          attribute:NSLayoutAttributeBottom
+                                                         multiplier:1.0
+                                                           constant:10.0]];
+    
+    [self.titleLabel addConstraint:[NSLayoutConstraint constraintWithItem:self.titleLabel
+                                                                attribute:NSLayoutAttributeWidth
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:nil
+                                                                attribute:NSLayoutAttributeNotAnAttribute
+                                                               multiplier:1.0
+                                                                 constant:250.0]];
+    
+    [self.titleLabel addConstraint:[NSLayoutConstraint constraintWithItem:self.titleLabel
+                                                                attribute:NSLayoutAttributeHeight
+                                                                relatedBy:NSLayoutRelationLessThanOrEqual
+                                                                   toItem:nil
+                                                                attribute:NSLayoutAttributeNotAnAttribute
+                                                               multiplier:1.0
+                                                                 constant:100.0]];
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.titleLabel
+                                                          attribute:NSLayoutAttributeCenterX
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeCenterX
+                                                         multiplier:1.0
+                                                           constant:0.0]];
+    [self.titleLabel updateConstraintsIfNeeded];
+    
+    self.imageView = [[UIImageView alloc]initWithImage:self.achievement.image];
+    [self.view addSubview:self.imageView];
+    [self.imageView setContentMode:UIViewContentModeScaleAspectFit];
+    [self.imageView setTranslatesAutoresizingMaskIntoConstraints: NO];
+    
+    [self.imageView addConstraint:[NSLayoutConstraint constraintWithItem:self.imageView
+                                                               attribute:NSLayoutAttributeWidth
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:nil
+                                                               attribute:NSLayoutAttributeNotAnAttribute
+                                                              multiplier:1.0
+                                                                constant:250.0]];
+    
+    [self.imageView addConstraint:[NSLayoutConstraint constraintWithItem:self.imageView
+                                                                attribute:NSLayoutAttributeHeight
+                                                                relatedBy:NSLayoutRelationLessThanOrEqual
+                                                                   toItem:nil
+                                                                attribute:NSLayoutAttributeNotAnAttribute
+                                                               multiplier:1.0
+                                                                 constant:260.0]];
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.imageView
+                                                          attribute:NSLayoutAttributeCenterX
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeCenterX
+                                                         multiplier:1.0
+                                                           constant:0.0]];
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.imageView
+                                                          attribute:NSLayoutAttributeTop
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.titleLabel
+                                                          attribute:NSLayoutAttributeBottom
+                                                         multiplier:1.0
+                                                           constant:20.0]];
+    
+    self.descriptionLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    [self.view addSubview:self.descriptionLabel];
+    self.descriptionLabel.text = self.achievement.descriptionText;
+    [self.descriptionLabel setNumberOfLines:0];
+    [self.descriptionLabel setTranslatesAutoresizingMaskIntoConstraints: NO];
+    
+    [self.descriptionLabel addConstraint:[NSLayoutConstraint constraintWithItem:self.descriptionLabel
+                                                                      attribute:NSLayoutAttributeWidth
+                                                                      relatedBy:NSLayoutRelationEqual
+                                                                         toItem:nil
+                                                                      attribute:NSLayoutAttributeNotAnAttribute
+                                                                     multiplier:1.0
+                                                                       constant:250.0]];
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.descriptionLabel
+                                                          attribute:NSLayoutAttributeCenterX
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeCenterX
+                                                         multiplier:1.0
+                                                           constant:0.0]];
+
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.descriptionLabel
+                                                          attribute:NSLayoutAttributeTop
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.imageView
+                                                          attribute:NSLayoutAttributeBottom
+                                                         multiplier:1.0
+                                                           constant:20.0]];
+
+    
+ 
+
+
+    
+
 	// Do any additional setup after loading the view.
 }
+- (void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+    
+    
+    
+}
+
 
 - (void)closeViewController
 {

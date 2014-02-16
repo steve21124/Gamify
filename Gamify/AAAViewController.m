@@ -33,7 +33,9 @@
     NSInteger scoreToSet = self.addScoreTextField.text.integerValue;
     [[AAAGamificationManager sharedManager] setMainPlayersScore:scoreToSet];
     [self.addScoreTextField resignFirstResponder];
-    [[AAAGamificationManager sharedManager] showAchievementViewControllerOnViewController:self withAchievement:nil];
+    AAAAchievement *achievement = [[AAAAchievement alloc] initWithKey:@"" titleText:NSLocalizedString(@"Blue penguin", @"") descriptionText:NSLocalizedString(@"You got all penguin related questions correct.", @"") image:[UIImage imageNamed:@"forest"]];
+    
+    [[AAAGamificationManager sharedManager] showAchievementViewControllerOnViewController:self withAchievement:achievement];
 }
 
 - (IBAction)didTapAddToScoreButton:(id)sender {
