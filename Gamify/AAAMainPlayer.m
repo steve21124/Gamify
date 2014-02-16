@@ -21,10 +21,12 @@
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super init];
-    if (self){
+    
+    if (self) {
         self.playerName = [aDecoder decodeObjectForKey:@"playerName"];
         self.playerScore = [aDecoder decodeIntegerForKey:@"playerScore"];
     }
+    
     return self;
 }
 @end

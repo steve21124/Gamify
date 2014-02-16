@@ -8,6 +8,7 @@
 
 #import "AAAGamificationManager.h"
 #import "AAAMainPlayer.h"
+#import "AAAAchievmentViewController.h"
 
 @interface AAAGamificationManager ()
 @property (nonatomic,strong) AAAMainPlayer *mainPlayer;
@@ -29,10 +30,11 @@
 {
     return [[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingString:@"/score"];
 }
+
 - (void)setScoreView:(AAAScoreView *)scoreView
 {
     _scoreView = scoreView;
-    [scoreView setScoreTo:self.mainPlayer.playerScore scoreChange:0];
+    _scoreView.scoreLabel.text = [NSString stringWithFormat:@"%d",self.mainPlayer.playerScore];
 }
 
 - (void)loadMainPlayer {
@@ -44,7 +46,7 @@
     NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:codedData];
     self.mainPlayer  = [unarchiver decodeObjectForKey:@"mainPlayer"];
     if (self.mainPlayer == nil) {
-        self.mainPlayer = [[AAAMainPlayer alloc]init];
+        self.mainPlayer = [[AAAMainPlayer alloc] init];
     }
     [unarchiver finishDecoding];
 }
@@ -54,7 +56,6 @@
     NSError *error;
     [[NSFileManager defaultManager] createDirectoryAtPath:[self documentsDirectory] withIntermediateDirectories:YES attributes:nil error:&error];
     NSString *filePath = [[self documentsDirectory] stringByAppendingPathComponent:@"data"];
-    
     NSMutableData *data = [[NSMutableData alloc] init];
     NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
     [archiver encodeObject:self.mainPlayer forKey:@"mainPlayer"];
@@ -67,6 +68,22 @@
     return self.mainPlayer.playerScore;
 }
 
+- (void)initialSetScoreNoAnimation
+{
+    if ([self.scoreView respondsToSelector:@selector(setScoreWithoutAnimation:)]) {
+        [self.scoreView setScoreWithoutAnimation:self.mainPlayer.playerScore];
+    }
+}
+
+- (void)showAchievementViewControllerOnViewController:(UIViewController*)viewController withAchievement:(AAAAchievement*)achievement
+{
+    AAAAchievmentViewController *achievementViewController = [[AAAAchievmentViewController alloc] init];
+    achievementViewController.achievement = achievement;
+    [viewController presentViewController:achievementViewController animated:YES completion:^{
+        
+    }];
+}
+
 - (void)setMainPlayersScore:(NSInteger)score
 {
     NSInteger oldScore = self.mainPlayer.playerScore;
@@ -76,6 +93,7 @@
         [self.scoreView setScoreTo:score scoreChange: score - oldScore ];
     }
     [self saveMainPlayerData];
+    
 }
 
 - (void)addToMainPlayerScore:(NSInteger)score
