@@ -9,7 +9,7 @@ The simplest way of adding gamification to your app!
 - Easy to set up achievements which can be triggered whenever you want
 
 
-![shows how its done](https://github.com/haaakon/Gamify/blob/master/v0.0.1.gif?raw=true)
+![shows how its done](https://github.com/haaakon/Gamify/blob/master/v0.0.2.gif?raw=true)
 ##Example code
 
 ### Add to score
