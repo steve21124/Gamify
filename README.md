@@ -33,9 +33,10 @@ AAAAchievement *achievement = [[AAAAchievement alloc] initWithKey:@"" titleText:
 
 ```
 ##Upcoming
-- Better API
-- List of achievements gotten
-
+- More ways of customizing ui
+- Show List of achievements gotten
+- Dont give out achievements double to a player
+- 
 
 
 
