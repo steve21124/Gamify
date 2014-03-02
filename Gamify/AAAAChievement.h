@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AAAAchievement : NSObject
+@interface AAAAchievement : NSObject<NSCoding>
+
 
 @property (nonatomic,strong, readonly) NSString   *key;
 @property (nonatomic,strong, readonly) NSString   *titleText;

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "AAAAChievement.h"
 @interface AAAAchievmentViewController : UIViewController
+
 @property (nonatomic,strong) AAAAchievement *achievement;
+
 
 @end

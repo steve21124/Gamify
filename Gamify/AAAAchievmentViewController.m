@@ -18,15 +18,6 @@
 
 @implementation AAAAchievmentViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -36,7 +27,6 @@
     self.playerUnlockedAchievementLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     [self.view addSubview:self.playerUnlockedAchievementLabel];
     self.playerUnlockedAchievementLabel.text = @"Achievement unlocked";
-//    [self.playerUnlockedAchievementLabel setTextAlignment:NSTextAlignmentCenter];
     [self.playerUnlockedAchievementLabel setTextColor:RGB(106, 105, 103)];
     [self.playerUnlockedAchievementLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     
@@ -72,6 +62,7 @@
     [self.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:35]];
     [self.titleLabel setNumberOfLines:0];
     [self.titleLabel setTranslatesAutoresizingMaskIntoConstraints: NO];
+    
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.titleLabel
                                                           attribute:NSLayoutAttributeTop
                                                           relatedBy:NSLayoutRelationEqual
@@ -180,14 +171,6 @@
 
 	// Do any additional setup after loading the view.
 }
-- (void)viewWillLayoutSubviews
-{
-    [super viewWillLayoutSubviews];
-    
-    
-    
-}
-
 
 - (void)closeViewController
 {
