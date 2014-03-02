@@ -10,8 +10,6 @@
 
 @implementation AAAMainPlayer
 
-
-
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:_playerName forKey:@"playerName"];

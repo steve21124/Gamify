@@ -13,6 +13,7 @@
 @interface AAAGamificationManager ()
 @property (nonatomic,strong) AAAMainPlayer *mainPlayer;
 @end
+
 @implementation AAAGamificationManager
 
 + (AAAGamificationManager *)sharedManager {
@@ -34,7 +35,7 @@
 - (void)setScoreView:(AAAScoreView *)scoreView
 {
     _scoreView = scoreView;
-    _scoreView.scoreLabel.text = [NSString stringWithFormat:@"%d",self.mainPlayer.playerScore];
+    _scoreView.scoreLabel.text = [NSString stringWithFormat:@"%ld",self.mainPlayer.playerScore];
 }
 
 - (void)loadMainPlayer {

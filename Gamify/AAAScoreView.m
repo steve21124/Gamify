@@ -114,14 +114,14 @@ const NSString  *kScoreToSetKey = @"scoreToSetKey";
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         
-        NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.043 target:self selector:@selector(increment:) userInfo:@{kScoreLabelKey:self.scoreLabel, kScoreToSetKey : [NSNumber numberWithInt:score]} repeats:YES];
+        NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.043 target:self selector:@selector(increment:) userInfo:@{kScoreLabelKey:self.scoreLabel, kScoreToSetKey : [NSNumber numberWithInteger:score]} repeats:YES];
         [timer fire];
         self.incrementingTimer = timer;
         if (change > 0) {
-            self.scoreChangeLabel.text = [NSString stringWithFormat:@"+%d",change];
+            self.scoreChangeLabel.text = [NSString stringWithFormat:@"+%ld",change];
             
         }else {
-            self.scoreChangeLabel.text = [NSString stringWithFormat:@"%d",change];
+            self.scoreChangeLabel.text = [NSString stringWithFormat:@"%ld",change];
             
         }
     });
@@ -162,7 +162,7 @@ const NSString  *kScoreToSetKey = @"scoreToSetKey";
 
 - (void)setScoreWithoutAnimation:(NSInteger) score
 {
-    self.scoreLabel.text =  [NSString stringWithFormat:@"%d", score];
+    self.scoreLabel.text =  [NSString stringWithFormat:@"%ld", (long)score];
 }
 
 - (void)increment:(NSTimer *)timer {

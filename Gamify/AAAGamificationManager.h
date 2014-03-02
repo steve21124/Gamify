@@ -19,6 +19,7 @@
 - (void)setMainPlayersScore:(NSInteger)score;
 - (void)addToMainPlayerScore:(NSInteger)score;
 - (NSInteger)mainPlayerScore;
+
 - (void)showAchievementViewControllerOnViewController:(UIViewController*)viewController withAchievement:(AAAAchievement*)achievement;
 /**
  *  Add achievement to the controller
@@ -27,6 +28,9 @@
  *  @param key         <#key description#>
  */
 - (void)addAchievement:(AAAAchievement*) achievement forKey:(NSString*)key;
+
 - (AAAAchievement*)achievementForKey:(NSString*)key;
+
+
 
 @end
