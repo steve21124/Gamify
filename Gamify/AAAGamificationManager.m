@@ -72,14 +72,6 @@
     }
 }
 
-- (void)showAchievementViewControllerOnViewController:(UIViewController*)viewController withAchievement:(AAAAchievement*)achievement
-{
-    AAAAchievmentViewController *achievementViewController = [[AAAAchievmentViewController alloc] init];
-    achievementViewController.achievement = achievement;
-    [viewController presentViewController:achievementViewController animated:YES completion:^{
-        
-    }];
-}
 
 - (void)setMainPlayersScore:(NSInteger)score
 {

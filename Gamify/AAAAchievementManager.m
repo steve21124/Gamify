@@ -7,15 +7,26 @@
 //
 
 #import "AAAAchievementManager.h"
+#import "AAAAchievmentViewController.h"
 
 @implementation AAAAchievementManager
 + (AAAAchievementManager *)sharedManager {
     static AAAAchievementManager *_sharedManager = nil;
     static dispatch_once_t onceToken;
+    
     dispatch_once(&onceToken, ^{
         _sharedManager = [[AAAAchievementManager alloc] init];
     });
-    
     return _sharedManager;
 }
+
+- (void)showAchievementViewControllerOnViewController:(UIViewController*)viewController withAchievement:(AAAAchievement*)achievement
+{
+    AAAAchievmentViewController *achievementViewController = [[AAAAchievmentViewController alloc] init];
+    achievementViewController.achievement = achievement;
+    [viewController presentViewController:achievementViewController animated:YES completion:^{
+        
+    }];
+}
+
 @end

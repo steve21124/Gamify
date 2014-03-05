@@ -26,6 +26,7 @@
 		EC4AF84D18AC1BAE006BE661 /* AAAGamificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4AF84C18AC1BAE006BE661 /* AAAGamificationManager.m */; };
 		EC4AF85018AC1C54006BE661 /* AAAScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4AF84F18AC1C54006BE661 /* AAAScoreViewController.m */; };
 		EC4AF85318AC2011006BE661 /* AAAMainPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4AF85218AC2011006BE661 /* AAAMainPlayer.m */; };
+		EC5D1D9A18C7C04100BE1A7D /* AAAAchievementDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5D1D9918C7C04100BE1A7D /* AAAAchievementDataSource.m */; };
 		ECA9763D18AD6A4100703BB3 /* AAAAChievement.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA9763C18AD6A4100703BB3 /* AAAAChievement.m */; };
 		ECA9764018AD705200703BB3 /* AAAAchievmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA9763F18AD705200703BB3 /* AAAAchievmentViewController.m */; };
 		ECB3A6AB18B4A111002D8C22 /* AAAAchivementListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB3A6AA18B4A111002D8C22 /* AAAAchivementListTableViewController.m */; };
@@ -71,6 +72,8 @@
 		EC4AF84F18AC1C54006BE661 /* AAAScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAAScoreViewController.m; path = Gamify/AAAScoreViewController.m; sourceTree = "<group>"; };
 		EC4AF85118AC2011006BE661 /* AAAMainPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAAMainPlayer.h; path = Gamify/AAAMainPlayer.h; sourceTree = "<group>"; };
 		EC4AF85218AC2011006BE661 /* AAAMainPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAAMainPlayer.m; path = Gamify/AAAMainPlayer.m; sourceTree = "<group>"; };
+		EC5D1D9818C7C04100BE1A7D /* AAAAchievementDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAAAchievementDataSource.h; sourceTree = "<group>"; };
+		EC5D1D9918C7C04100BE1A7D /* AAAAchievementDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAAAchievementDataSource.m; sourceTree = "<group>"; };
 		ECA9763B18AD6A4100703BB3 /* AAAAChievement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAAAChievement.h; path = Gamify/AAAAChievement.h; sourceTree = "<group>"; };
 		ECA9763C18AD6A4100703BB3 /* AAAAChievement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAAAChievement.m; path = Gamify/AAAAChievement.m; sourceTree = "<group>"; };
 		ECA9763E18AD705200703BB3 /* AAAAchievmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAAAchievmentViewController.h; path = Gamify/AAAAchievmentViewController.h; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				EC4AF84C18AC1BAE006BE661 /* AAAGamificationManager.m */,
 				ECFDBE2918C626C00075B428 /* AAAAchievementManager.h */,
 				ECFDBE2A18C626C00075B428 /* AAAAchievementManager.m */,
+				EC5D1D9818C7C04100BE1A7D /* AAAAchievementDataSource.h */,
+				EC5D1D9918C7C04100BE1A7D /* AAAAchievementDataSource.m */,
 				EC4AF85118AC2011006BE661 /* AAAMainPlayer.h */,
 				EC4AF85218AC2011006BE661 /* AAAMainPlayer.m */,
 				ECA9763B18AD6A4100703BB3 /* AAAAChievement.h */,
@@ -295,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC5D1D9A18C7C04100BE1A7D /* AAAAchievementDataSource.m in Sources */,
 				ECFDBE2B18C626C00075B428 /* AAAAchievementManager.m in Sources */,
 				EC4AF82118AC16FC006BE661 /* AAAAppDelegate.m in Sources */,
 				ECB3A6AB18B4A111002D8C22 /* AAAAchivementListTableViewController.m in Sources */,

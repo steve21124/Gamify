@@ -41,7 +41,6 @@
  */
 - (NSInteger)mainPlayerScore;
 
-- (void)showAchievementViewControllerOnViewController:(UIViewController*)viewController withAchievement:(AAAAchievement*)achievement;
 /**
  *  Add achievement to the controller
  *
