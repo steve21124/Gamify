@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+@protocol AAAAchievementManagerDataSource;
 
 @interface AAAAchievementManager : NSObject
+
+@property (nonatomic,strong) id<AAAAchievementManagerDataSource> dataSource;
+
++ (AAAAchievementManager *)sharedManager;
+@end
+
+@protocol AAAAchievementManagerDataSource <NSObject>
+
 
 @end

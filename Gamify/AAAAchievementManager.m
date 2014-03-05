@@ -9,5 +9,13 @@
 #import "AAAAchievementManager.h"
 
 @implementation AAAAchievementManager
-
++ (AAAAchievementManager *)sharedManager {
+    static AAAAchievementManager *_sharedManager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _sharedManager = [[AAAAchievementManager alloc] init];
+    });
+    
+    return _sharedManager;
+}
 @end

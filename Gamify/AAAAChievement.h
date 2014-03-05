@@ -17,4 +17,5 @@
 @property (nonatomic,strong, readonly) UIImage    *image;
 
 - (AAAAchievement*)initWithKey:(NSString *)key titleText:(NSString*)titleText descriptionText:(NSString*)descriptionText image:(UIImage*)image;
+
 @end
