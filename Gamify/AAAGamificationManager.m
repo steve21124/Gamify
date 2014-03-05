@@ -27,15 +27,10 @@
     return _sharedManager;
 }
 
-- (NSString*)documentsDirectory
-{
-    return [[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingString:@"/score"];
-}
-
 - (void)setScoreView:(AAAScoreView *)scoreView
 {
     _scoreView = scoreView;
-    _scoreView.scoreLabel.text = [NSString stringWithFormat:@"%ld",self.mainPlayer.playerScore];
+    [scoreView setScoreWithoutAnimation:self.mainPlayer.playerScore];
 }
 
 - (void)loadMainPlayer {
@@ -55,8 +50,9 @@
 - (void)saveMainPlayerData
 {
     NSError *error;
-    [[NSFileManager defaultManager] createDirectoryAtPath:[self documentsDirectory] withIntermediateDirectories:YES attributes:nil error:&error];
-    NSString *filePath = [[self documentsDirectory] stringByAppendingPathComponent:@"data"];
+    NSString *path = [[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingString:@"/score"];
+    [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:&error];
+    NSString *filePath = [path stringByAppendingPathComponent:@"data"];
     NSMutableData *data = [[NSMutableData alloc] init];
     NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
     [archiver encodeObject:self.mainPlayer forKey:@"mainPlayer"];
