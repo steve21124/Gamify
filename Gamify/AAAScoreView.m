@@ -35,8 +35,8 @@ const NSString  *kScoreToSetKey = @"scoreToSetKey";
         self.scoreLabel = [[UILabel alloc]initWithFrame:CGRectZero];
         self.backgroundColor = [UIColor clearColor];
         self.scoreChangeLabel = [[UILabel alloc]initWithFrame:CGRectZero];
-        [self.scoreLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:17]];
-        [self.scoreChangeLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:17]];
+        [self.scoreLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:26]];
+        [self.scoreChangeLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:26]];
         [self.scoreLabel setTextColor:[UIColor blackColor]];
         [self.scoreChangeLabel setTextColor:[UIColor blackColor]];
     }
@@ -138,7 +138,7 @@ const NSString  *kScoreToSetKey = @"scoreToSetKey";
     double delayInSeconds = 0.1;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.043 target:self selector:@selector(increment:) userInfo:@{kScoreLabelKey:self.scoreLabel, kScoreToSetKey : [NSNumber numberWithInteger:score]} repeats:YES];
+        NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.040 target:self selector:@selector(increment:) userInfo:@{kScoreLabelKey:self.scoreLabel, kScoreToSetKey : [NSNumber numberWithInteger:score]} repeats:YES];
         [timer fire];
         self.incrementingTimer = timer;
         if (change > 0) {
@@ -172,7 +172,7 @@ const NSString  *kScoreToSetKey = @"scoreToSetKey";
                                                                  toItem:self
                                                               attribute:NSLayoutAttributeTop
                                                              multiplier:1.0
-                                                               constant:-25.0];
+                                                               constant:-20.0];
         
         [self addConstraint:newYpositionConstraint];
         [self layoutSubviews];
