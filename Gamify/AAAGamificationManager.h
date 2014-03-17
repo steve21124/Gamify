@@ -14,7 +14,11 @@
 @property (nonatomic,weak) AAAScoreView *scoreView;
 
 + (AAAGamificationManager *)sharedManager;
-
+/**
+ *  Sets score as the main players current score, 
+ *  disregarding what the score was previously
+ *  If main players score is 15, setMainPlayersScore is called with 5
+ */
 - (void)initialSetScoreNoAnimation;
 /**
  *  Sets score as the main players current score, 
@@ -48,9 +52,4 @@
  *  @param key
  */
 - (void)addAchievement:(AAAAchievement*) achievement forKey:(NSString*)key;
-
-- (AAAAchievement*)achievementForKey:(NSString*)key;
-
-
-
 @end

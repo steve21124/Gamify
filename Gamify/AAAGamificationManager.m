@@ -11,19 +11,20 @@
 #import "AAAAchievmentViewController.h"
 
 @interface AAAGamificationManager ()
-@property (nonatomic,strong) AAAMainPlayer *mainPlayer;
+@property (nonatomic, strong) AAAMainPlayer *mainPlayer;
 @end
 
 @implementation AAAGamificationManager
 
-+ (AAAGamificationManager *)sharedManager {
++ (AAAGamificationManager *)sharedManager
+{
     static AAAGamificationManager *_sharedManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _sharedManager = [[AAAGamificationManager alloc] init];
         [_sharedManager loadMainPlayer];
     });
-    
+
     return _sharedManager;
 }
 
@@ -33,14 +34,16 @@
     [scoreView setScoreWithoutAnimation:self.mainPlayer.playerScore];
 }
 
-- (void)loadMainPlayer {
+- (void)loadMainPlayer
+{
     NSError *error;
-    NSString *path = [[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingString:@"/score"];
+    NSString *path = [[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+        stringByAppendingString:@"/score"];
     [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:&error];
     NSString *filePath = [path stringByAppendingPathComponent:@"data"];
     NSData *codedData = [[NSData alloc] initWithContentsOfFile:filePath];
     NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:codedData];
-    self.mainPlayer  = [unarchiver decodeObjectForKey:@"mainPlayer"];
+    self.mainPlayer = [unarchiver decodeObjectForKey:@"mainPlayer"];
     if (self.mainPlayer == nil) {
         self.mainPlayer = [[AAAMainPlayer alloc] init];
     }
@@ -50,7 +53,8 @@
 - (void)saveMainPlayerData
 {
     NSError *error;
-    NSString *path = [[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingString:@"/score"];
+    NSString *path = [[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+        stringByAppendingString:@"/score"];
     [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:&error];
     NSString *filePath = [path stringByAppendingPathComponent:@"data"];
     NSMutableData *data = [[NSMutableData alloc] init];
@@ -72,25 +76,23 @@
     }
 }
 
-
 - (void)setMainPlayersScore:(NSInteger)score
 {
     NSInteger oldScore = self.mainPlayer.playerScore;
     self.mainPlayer.playerScore = score;
-    
+
     if ([self.scoreView respondsToSelector:@selector(setScoreTo:scoreChange:)]) {
-        [self.scoreView setScoreTo:score scoreChange: score - oldScore ];
+        [self.scoreView setScoreTo:score scoreChange:score - oldScore];
     }
     [self saveMainPlayerData];
-    
 }
 
 - (void)addToMainPlayerScore:(NSInteger)score
 {
     NSInteger oldScore = self.mainPlayer.playerScore;
-    
+
     if ([self.scoreView respondsToSelector:@selector(setScoreTo:scoreChange:)]) {
-        [self.scoreView setScoreTo:score + oldScore scoreChange: score ];
+        [self.scoreView setScoreTo:score + oldScore scoreChange:score];
     }
     self.mainPlayer.playerScore = score + oldScore;
     [self saveMainPlayerData];
