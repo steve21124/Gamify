@@ -20,9 +20,16 @@
     return _sharedManager;
 }
 
-- (void)showAchievementViewControllerOnViewController:(UIViewController*)viewController withAchievement:(AAAAchievement*)achievement
+- (void)showAchievementViewControllerOnViewController:(UIViewController*)viewController achievementKey:(NSString *)key
 {
+    NSParameterAssert(viewController);
+    NSParameterAssert(key);
     AAAAchievmentViewController *achievementViewController = [[AAAAchievmentViewController alloc] init];
+    AAAAchievement *achievement = nil;
+    if ([self.dataSource respondsToSelector:@selector(achievementForKey:)]){
+        achievement = [self.dataSource achievementForKey:key];
+    }
+    NSAssert(achievement, @"No achievement set when showing achievement view Controller");
     achievementViewController.achievement = achievement;
     [viewController presentViewController:achievementViewController animated:YES completion:^{
         

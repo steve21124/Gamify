@@ -16,11 +16,10 @@
 @property (nonatomic,strong) id<AAAAchievementManagerDataSource> dataSource;
 
 + (AAAAchievementManager *)sharedManager;
+- (void)showAchievementViewControllerOnViewController:(UIViewController*)viewController achievementKey:(NSString *)key;
 
 @end
 
 @protocol AAAAchievementManagerDataSource <NSObject>
-
-- (NSInteger)numberOfAchievementsExisting;
 - (AAAAchievement*)achievementForKey:(NSString *)key;
 @end
