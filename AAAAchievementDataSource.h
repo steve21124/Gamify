@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "AAAAchievementManager.h"
 
+extern NSString *const kForestStarAchievementKey;
+extern NSString *const kPenguinAchievementKey;
 @interface AAAAchievementDataSource : NSObject<AAAAchievementManagerDataSource>
 
 @end
