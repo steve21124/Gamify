@@ -8,6 +8,7 @@
 
 #import "AAAScoreView.h"
 #import "AAAGamificationManager.h"
+#import <QuartzCore/QuartzCore.h>
 const NSString  *kScoreLabelKey = @"scoreLabelKey";
 const NSString  *kScoreToSetKey = @"scoreToSetKey";
 @interface AAAScoreView ()
@@ -35,8 +36,8 @@ const NSString  *kScoreToSetKey = @"scoreToSetKey";
         self.scoreLabel = [[UILabel alloc]initWithFrame:CGRectZero];
         self.backgroundColor = [UIColor clearColor];
         self.scoreChangeLabel = [[UILabel alloc]initWithFrame:CGRectZero];
-        [self.scoreLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:26]];
-        [self.scoreChangeLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:26]];
+        [self.scoreLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:30]];
+        [self.scoreChangeLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:30]];
         [self.scoreLabel setTextColor:[UIColor blackColor]];
         [self.scoreChangeLabel setTextColor:[UIColor blackColor]];
     }
@@ -46,7 +47,6 @@ const NSString  *kScoreToSetKey = @"scoreToSetKey";
 
 - (void)willMoveToSuperview:(UIView *)newSuperview
 {
-    
     if (self.scoreLabel.superview == nil) {
         [self addSubview: self.scoreLabel];
     }
@@ -66,6 +66,7 @@ const NSString  *kScoreToSetKey = @"scoreToSetKey";
                                                      attribute:NSLayoutAttributeLeft
                                                     multiplier:1.0
                                                       constant:0.0]];
+    
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.scoreLabel
                                                      attribute:NSLayoutAttributeRight
                                                      relatedBy:NSLayoutRelationEqual
@@ -121,7 +122,6 @@ const NSString  *kScoreToSetKey = @"scoreToSetKey";
 
 - (void)setScoreLabelFont:(UIFont*)font
 {
-    
     [self.scoreLabel setFont:font];
     self.scoreChangeLabel.font = font;
     [self layoutIfNeeded];
@@ -143,7 +143,6 @@ const NSString  *kScoreToSetKey = @"scoreToSetKey";
         self.incrementingTimer = timer;
         if (change > 0) {
             self.scoreChangeLabel.text = [NSString stringWithFormat:@"+%ld",change];
-            
         }else {
             self.scoreChangeLabel.text = [NSString stringWithFormat:@"%ld",change];
         }
@@ -161,8 +160,23 @@ const NSString  *kScoreToSetKey = @"scoreToSetKey";
     [self removeConstraints:self.scoreChangeLabel.constraints];
     self.scoreChangeLabel.alpha = 0;
     __block NSLayoutConstraint *newYpositionConstraint;
-    
-    [UIView animateWithDuration:0.7 delay:0 options: UIViewAnimationOptionOverrideInheritedDuration animations:^{
+    [CATransaction begin];
+    [self.scoreChangeLabel.layer removeAllAnimations];
+    [self.layer removeAllAnimations];
+    [CATransaction commit];
+    [self layoutSubviews];
+    [self removeConstraint:self.scoreChangeYConstraint];
+    NSLayoutConstraint *yPositionConstraint = [NSLayoutConstraint constraintWithItem:self.scoreChangeLabel
+                                                                           attribute:NSLayoutAttributeCenterY
+                                                                           relatedBy:NSLayoutRelationEqual
+                                                                              toItem:self
+                                                                           attribute:NSLayoutAttributeCenterY
+                                                                          multiplier:1.0
+                                                                            constant:1.0];
+    [self addConstraint:yPositionConstraint];
+    self.scoreChangeYConstraint = yPositionConstraint;
+    [self layoutSubviews];
+    [UIView animateWithDuration:0.7 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
         self.scoreChangeLabel.alpha = 1;
         [self  removeConstraint:self.scoreChangeYConstraint];
         
@@ -172,24 +186,23 @@ const NSString  *kScoreToSetKey = @"scoreToSetKey";
                                                                  toItem:self
                                                               attribute:NSLayoutAttributeTop
                                                              multiplier:1.0
-                                                               constant:-20.0];
+                                                               constant:-10.0];
         
         [self addConstraint:newYpositionConstraint];
         [self layoutSubviews];
     } completion:^(BOOL finished) {
-        [UIView animateWithDuration:0.3 delay:0.2 options:UIViewAnimationOptionOverrideInheritedOptions animations:^{
-            
-            self.scoreChangeLabel.alpha = 0;
-            
-        } completion:^(BOOL finished) {
-            [self removeConstraint:newYpositionConstraint];
-            [self addConstraint:self.scoreChangeYConstraint];
-        } ];
-        
+        if (finished) {
+            [UIView animateWithDuration:0.3 delay:0.2 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+                self.scoreChangeLabel.alpha = 0;
+            } completion:^(BOOL finished) {
+                if ( finished){
+                    [self removeConstraint:newYpositionConstraint];
+                    [self addConstraint:self.scoreChangeYConstraint];
+                }
+            } ];
+        }
     }];
 }
-
-
 
 - (void)increment:(NSTimer *)timer {
     
