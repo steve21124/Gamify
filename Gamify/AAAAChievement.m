@@ -20,7 +20,7 @@
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super init];
-    if (self){
+    if (self) {
         _key = [aDecoder decodeObjectForKey:@"key"];
         _titleText = [aDecoder decodeObjectForKey:@"titleText"];
         _descriptionText = [aDecoder decodeObjectForKey:@"descriptionText"];
@@ -29,9 +29,13 @@
     return self;
 }
 
-- (AAAAchievement*)initWithKey:(NSString *)key titleText:(NSString*)titleText descriptionText:(NSString*)descriptionText image:(UIImage*)image{
+- (AAAAchievement *)initWithKey:(NSString *)key
+                      titleText:(NSString *)titleText
+                descriptionText:(NSString *)descriptionText
+                          image:(UIImage *)image
+{
     self = [super init];
-    if (self ){
+    if (self) {
         _key = key;
         _titleText = titleText;
         _descriptionText = descriptionText;
