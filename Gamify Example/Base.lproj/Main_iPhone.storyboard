@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="AAAViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PoC-GR-MaC"/>
+                        <viewControllerLayoutGuide type="bottom" id="DB5-uu-aDU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zks-sS-ASO" customClass="AAAScoreView">
+                                <rect key="frame" x="23" y="65" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.53333333329999999" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="0dl-eo-nHe"/>
+                                    <constraint firstAttribute="height" constant="80" id="YsC-gO-YqL"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6g-7b-cCC">
+                                <rect key="frame" x="145" y="27" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="vd6-eq-3UM"/>
+                                </constraints>
+                                <state key="normal" title="Set">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapSetScoreButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kcN-K3-7VO"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7K1-q7-ITz">
+                                <rect key="frame" x="211" y="27" width="97" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znC-f0-y1n">
+                                <rect key="frame" x="145" y="65" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapAddToScoreButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jf7-Pr-XDq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Your score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ex7-pG-uYA">
+                                <rect key="frame" x="20" y="-4" width="87" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="Rxf-VL-14A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YID-en-2dG">
+                                <rect key="frame" x="102" y="197" width="116" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Blue penguin">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapBluePenguinAchievementButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rmq-dB-7eO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vw1-gi-bS6">
+                                <rect key="frame" x="102" y="235" width="116" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Forest star">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapForestStarAchievementButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2UR-2E-wpz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Achievements" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrL-TY-Nd1">
+                                <rect key="frame" x="86" y="168" width="149" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ex7-pG-uYA" firstAttribute="leading" secondItem="zks-sS-ASO" secondAttribute="leading" constant="-3" id="9vm-OV-gx9"/>
+                            <constraint firstItem="7K1-q7-ITz" firstAttribute="leading" secondItem="k6g-7b-cCC" secondAttribute="trailing" constant="9" id="A7a-XY-VSk"/>
+                            <constraint firstItem="zks-sS-ASO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="23" id="RT9-ez-09h"/>
+                            <constraint firstItem="k6g-7b-cCC" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="27" id="SgX-Ay-Aqa"/>
+                            <constraint firstItem="k6g-7b-cCC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="145" id="Slt-Ol-zjF"/>
+                            <constraint firstItem="7K1-q7-ITz" firstAttribute="leading" secondItem="znC-f0-y1n" secondAttribute="trailing" constant="9" id="VqM-cX-naJ"/>
+                            <constraint firstItem="znC-f0-y1n" firstAttribute="top" secondItem="k6g-7b-cCC" secondAttribute="bottom" constant="8" symbolic="YES" id="WDW-fV-a6R"/>
+                            <constraint firstItem="znC-f0-y1n" firstAttribute="leading" secondItem="k6g-7b-cCC" secondAttribute="leading" id="X9Q-WY-lHl"/>
+                            <constraint firstAttribute="trailing" secondItem="7K1-q7-ITz" secondAttribute="trailing" constant="12" id="bZp-Mb-WOb"/>
+                            <constraint firstItem="7K1-q7-ITz" firstAttribute="top" secondItem="k6g-7b-cCC" secondAttribute="top" id="boo-w0-IBT"/>
+                            <constraint firstItem="zks-sS-ASO" firstAttribute="top" secondItem="ex7-pG-uYA" secondAttribute="bottom" constant="13" id="eZD-ym-JXf"/>
+                            <constraint firstItem="zks-sS-ASO" firstAttribute="top" secondItem="PoC-GR-MaC" secondAttribute="bottom" constant="45" id="paf-ES-MSY"/>
+                            <constraint firstItem="znC-f0-y1n" firstAttribute="bottom" secondItem="7K1-q7-ITz" secondAttribute="bottom" id="zyH-Wl-zPn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addScoreButton" destination="znC-f0-y1n" id="bJn-iN-PuQ"/>
+                        <outlet property="addScoreTextField" destination="7K1-q7-ITz" id="qzT-Sf-0Al"/>
+                        <outlet property="scoreView" destination="zks-sS-ASO" id="hIQ-VA-lWq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
