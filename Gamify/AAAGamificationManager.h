@@ -45,11 +45,4 @@
  */
 - (NSInteger)mainPlayerScore;
 
-/**
- *  Add achievement to the controller
- *
- *  @param achievement 
- *  @param key
- */
-- (void)addAchievement:(AAAAchievement*) achievement forKey:(NSString*)key;
 @end
