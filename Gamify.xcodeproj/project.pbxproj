@@ -29,7 +29,6 @@
 		EC5D1D9A18C7C04100BE1A7D /* AAAAchievementDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5D1D9918C7C04100BE1A7D /* AAAAchievementDataSource.m */; };
 		ECA9763D18AD6A4100703BB3 /* AAAAChievement.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA9763C18AD6A4100703BB3 /* AAAAChievement.m */; };
 		ECA9764018AD705200703BB3 /* AAAAchievmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA9763F18AD705200703BB3 /* AAAAchievmentViewController.m */; };
-		ECB3A6AB18B4A111002D8C22 /* AAAAchivementListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB3A6AA18B4A111002D8C22 /* AAAAchivementListTableViewController.m */; };
 		ECFDBE2B18C626C00075B428 /* AAAAchievementManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFDBE2A18C626C00075B428 /* AAAAchievementManager.m */; };
 /* End PBXBuildFile section */
 
@@ -72,14 +71,12 @@
 		EC4AF84F18AC1C54006BE661 /* AAAScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAAScoreViewController.m; path = Gamify/AAAScoreViewController.m; sourceTree = "<group>"; };
 		EC4AF85118AC2011006BE661 /* AAAMainPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAAMainPlayer.h; path = Gamify/AAAMainPlayer.h; sourceTree = "<group>"; };
 		EC4AF85218AC2011006BE661 /* AAAMainPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAAMainPlayer.m; path = Gamify/AAAMainPlayer.m; sourceTree = "<group>"; };
-		EC5D1D9818C7C04100BE1A7D /* AAAAchievementDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAAAchievementDataSource.h; sourceTree = "<group>"; };
-		EC5D1D9918C7C04100BE1A7D /* AAAAchievementDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAAAchievementDataSource.m; sourceTree = "<group>"; };
+		EC5D1D9818C7C04100BE1A7D /* AAAAchievementDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAAAchievementDataSource.h; path = ../AAAAchievementDataSource.h; sourceTree = "<group>"; };
+		EC5D1D9918C7C04100BE1A7D /* AAAAchievementDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAAAchievementDataSource.m; path = ../AAAAchievementDataSource.m; sourceTree = "<group>"; };
 		ECA9763B18AD6A4100703BB3 /* AAAAChievement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAAAChievement.h; path = Gamify/AAAAChievement.h; sourceTree = "<group>"; };
 		ECA9763C18AD6A4100703BB3 /* AAAAChievement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAAAChievement.m; path = Gamify/AAAAChievement.m; sourceTree = "<group>"; };
 		ECA9763E18AD705200703BB3 /* AAAAchievmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAAAchievmentViewController.h; path = Gamify/AAAAchievmentViewController.h; sourceTree = "<group>"; };
 		ECA9763F18AD705200703BB3 /* AAAAchievmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAAAchievmentViewController.m; path = Gamify/AAAAchievmentViewController.m; sourceTree = "<group>"; };
-		ECB3A6A918B4A111002D8C22 /* AAAAchivementListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAAAchivementListTableViewController.h; sourceTree = "<group>"; };
-		ECB3A6AA18B4A111002D8C22 /* AAAAchivementListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAAAchivementListTableViewController.m; sourceTree = "<group>"; };
 		ECFDBE2918C626C00075B428 /* AAAAchievementManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAAAchievementManager.h; path = Gamify/AAAAchievementManager.h; sourceTree = "<group>"; };
 		ECFDBE2A18C626C00075B428 /* AAAAchievementManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAAAchievementManager.m; path = Gamify/AAAAchievementManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,27 +105,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC1A556F18D24C4B00765C3C /* Gamify */ = {
+			isa = PBXGroup;
+			children = (
+				EC72179418D4901A008C2F4A /* Achievements */,
+				EC72179518D49022008C2F4A /* Score */,
+			);
+			name = Gamify;
+			sourceTree = "<group>";
+		};
 		EC4AF80418AC16FC006BE661 = {
 			isa = PBXGroup;
 			children = (
-				EC4AF84E18AC1C54006BE661 /* AAAScoreViewController.h */,
-				EC4AF84F18AC1C54006BE661 /* AAAScoreViewController.m */,
-				EC4AF84818AC1B58006BE661 /* AAAScoreView.h */,
-				EC4AF84918AC1B58006BE661 /* AAAScoreView.m */,
-				ECA9763E18AD705200703BB3 /* AAAAchievmentViewController.h */,
-				ECA9763F18AD705200703BB3 /* AAAAchievmentViewController.m */,
-				EC4AF84B18AC1BAE006BE661 /* AAAGamificationManager.h */,
-				EC4AF84C18AC1BAE006BE661 /* AAAGamificationManager.m */,
-				ECFDBE2918C626C00075B428 /* AAAAchievementManager.h */,
-				ECFDBE2A18C626C00075B428 /* AAAAchievementManager.m */,
-				EC5D1D9818C7C04100BE1A7D /* AAAAchievementDataSource.h */,
-				EC5D1D9918C7C04100BE1A7D /* AAAAchievementDataSource.m */,
-				EC4AF85118AC2011006BE661 /* AAAMainPlayer.h */,
-				EC4AF85218AC2011006BE661 /* AAAMainPlayer.m */,
-				ECA9763B18AD6A4100703BB3 /* AAAAChievement.h */,
-				ECA9763C18AD6A4100703BB3 /* AAAAChievement.m */,
-				ECB3A6A918B4A111002D8C22 /* AAAAchivementListTableViewController.h */,
-				ECB3A6AA18B4A111002D8C22 /* AAAAchivementListTableViewController.m */,
+				EC1A556F18D24C4B00765C3C /* Gamify */,
 				EC4AF81618AC16FC006BE661 /* Gamify Example */,
 				EC4AF83818AC16FC006BE661 /* GamifyTests */,
 				EC4AF80F18AC16FC006BE661 /* Frameworks */,
@@ -159,6 +148,8 @@
 		EC4AF81618AC16FC006BE661 /* Gamify Example */ = {
 			isa = PBXGroup;
 			children = (
+				EC5D1D9818C7C04100BE1A7D /* AAAAchievementDataSource.h */,
+				EC5D1D9918C7C04100BE1A7D /* AAAAchievementDataSource.m */,
 				EC4AF81F18AC16FC006BE661 /* AAAAppDelegate.h */,
 				EC4AF82018AC16FC006BE661 /* AAAAppDelegate.m */,
 				EC4AF82218AC16FC006BE661 /* Main_iPhone.storyboard */,
@@ -199,6 +190,34 @@
 				EC4AF83B18AC16FC006BE661 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC72179418D4901A008C2F4A /* Achievements */ = {
+			isa = PBXGroup;
+			children = (
+				ECA9763B18AD6A4100703BB3 /* AAAAChievement.h */,
+				ECA9763C18AD6A4100703BB3 /* AAAAChievement.m */,
+				ECA9763E18AD705200703BB3 /* AAAAchievmentViewController.h */,
+				ECA9763F18AD705200703BB3 /* AAAAchievmentViewController.m */,
+				ECFDBE2918C626C00075B428 /* AAAAchievementManager.h */,
+				ECFDBE2A18C626C00075B428 /* AAAAchievementManager.m */,
+			);
+			name = Achievements;
+			sourceTree = "<group>";
+		};
+		EC72179518D49022008C2F4A /* Score */ = {
+			isa = PBXGroup;
+			children = (
+				EC4AF84E18AC1C54006BE661 /* AAAScoreViewController.h */,
+				EC4AF84F18AC1C54006BE661 /* AAAScoreViewController.m */,
+				EC4AF84818AC1B58006BE661 /* AAAScoreView.h */,
+				EC4AF84918AC1B58006BE661 /* AAAScoreView.m */,
+				EC4AF85118AC2011006BE661 /* AAAMainPlayer.h */,
+				EC4AF85218AC2011006BE661 /* AAAMainPlayer.m */,
+				EC4AF84B18AC1BAE006BE661 /* AAAGamificationManager.h */,
+				EC4AF84C18AC1BAE006BE661 /* AAAGamificationManager.m */,
+			);
+			name = Score;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,7 +322,6 @@
 				EC5D1D9A18C7C04100BE1A7D /* AAAAchievementDataSource.m in Sources */,
 				ECFDBE2B18C626C00075B428 /* AAAAchievementManager.m in Sources */,
 				EC4AF82118AC16FC006BE661 /* AAAAppDelegate.m in Sources */,
-				ECB3A6AB18B4A111002D8C22 /* AAAAchivementListTableViewController.m in Sources */,
 				EC4AF85318AC2011006BE661 /* AAAMainPlayer.m in Sources */,
 				EC4AF82A18AC16FC006BE661 /* AAAViewController.m in Sources */,
 				EC4AF81D18AC16FC006BE661 /* main.m in Sources */,
