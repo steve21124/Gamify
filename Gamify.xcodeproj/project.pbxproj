@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC43C72B18E22F5600C56B17 /* Gamify-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC43C71618E22F5600C56B17 /* Gamify-Info.plist */; };
+		EC43C72E18E22F5600C56B17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC43C71A18E22F5600C56B17 /* main.m */; };
+		EC43C72F18E22F5600C56B17 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC43C71B18E22F5600C56B17 /* Images.xcassets */; };
+		EC43C73018E22F5600C56B17 /* AAAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC43C71D18E22F5600C56B17 /* AAAViewController.m */; };
+		EC43C73118E22F5600C56B17 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC43C71F18E22F5600C56B17 /* Main_iPad.storyboard */; };
+		EC43C73218E22F5600C56B17 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC43C72118E22F5600C56B17 /* Main_iPhone.storyboard */; };
+		EC43C73618E22F5600C56B17 /* AAAAchievementDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EC43C72A18E22F5600C56B17 /* AAAAchievementDataSource.m */; };
 		EC4AF81118AC16FC006BE661 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4AF81018AC16FC006BE661 /* Foundation.framework */; };
 		EC4AF81318AC16FC006BE661 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4AF81218AC16FC006BE661 /* CoreGraphics.framework */; };
 		EC4AF81518AC16FC006BE661 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4AF81418AC16FC006BE661 /* UIKit.framework */; };
-		EC4AF81B18AC16FC006BE661 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC4AF81918AC16FC006BE661 /* InfoPlist.strings */; };
-		EC4AF81D18AC16FC006BE661 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4AF81C18AC16FC006BE661 /* main.m */; };
 		EC4AF82118AC16FC006BE661 /* AAAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4AF82018AC16FC006BE661 /* AAAAppDelegate.m */; };
-		EC4AF82A18AC16FC006BE661 /* AAAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4AF82918AC16FC006BE661 /* AAAViewController.m */; };
-		EC4AF82C18AC16FC006BE661 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC4AF82B18AC16FC006BE661 /* Images.xcassets */; };
 		EC4AF83318AC16FC006BE661 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4AF83218AC16FC006BE661 /* XCTest.framework */; };
 		EC4AF83418AC16FC006BE661 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4AF81018AC16FC006BE661 /* Foundation.framework */; };
 		EC4AF83518AC16FC006BE661 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4AF81418AC16FC006BE661 /* UIKit.framework */; };
@@ -24,9 +27,6 @@
 		EC4AF84D18AC1BAE006BE661 /* AAAGamificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4AF84C18AC1BAE006BE661 /* AAAGamificationManager.m */; };
 		EC4AF85018AC1C54006BE661 /* AAAScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4AF84F18AC1C54006BE661 /* AAAScoreViewController.m */; };
 		EC4AF85318AC2011006BE661 /* AAAMainPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4AF85218AC2011006BE661 /* AAAMainPlayer.m */; };
-		ECA571BB18DB950600AC54AA /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA571B918DB950600AC54AA /* Main_iPhone.storyboard */; };
-		ECA571BC18DB950600AC54AA /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA571BA18DB950600AC54AA /* Main_iPad.storyboard */; };
-		ECA571BE18DB955C00AC54AA /* AAAAchievementDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA571BD18DB955C00AC54AA /* AAAAchievementDataSource.m */; };
 		ECA9763D18AD6A4100703BB3 /* AAAAChievement.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA9763C18AD6A4100703BB3 /* AAAAChievement.m */; };
 		ECA9764018AD705200703BB3 /* AAAAchievmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA9763F18AD705200703BB3 /* AAAAchievmentViewController.m */; };
 		ECFDBE2B18C626C00075B428 /* AAAAchievementManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFDBE2A18C626C00075B428 /* AAAAchievementManager.m */; };
@@ -43,19 +43,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC43C71618E22F5600C56B17 /* Gamify-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Gamify-Info.plist"; path = "Gamify Example/Gamify-Info.plist"; sourceTree = SOURCE_ROOT; };
+		EC43C71718E22F5600C56B17 /* Gamify-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Gamify-Prefix.pch"; path = "Gamify Example/Gamify-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		EC43C71A18E22F5600C56B17 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Gamify Example/main.m"; sourceTree = SOURCE_ROOT; };
+		EC43C71B18E22F5600C56B17 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Gamify Example/Images.xcassets"; sourceTree = SOURCE_ROOT; };
+		EC43C71C18E22F5600C56B17 /* AAAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAAViewController.h; path = "Gamify Example/AAAViewController.h"; sourceTree = SOURCE_ROOT; };
+		EC43C71D18E22F5600C56B17 /* AAAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAAViewController.m; path = "Gamify Example/AAAViewController.m"; sourceTree = SOURCE_ROOT; };
+		EC43C72018E22F5600C56B17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main_iPad.storyboard; sourceTree = "<group>"; };
+		EC43C72218E22F5600C56B17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
+		EC43C72918E22F5600C56B17 /* AAAAchievementDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAAAchievementDataSource.h; path = "Gamify Example/AAAAchievementDataSource.h"; sourceTree = SOURCE_ROOT; };
+		EC43C72A18E22F5600C56B17 /* AAAAchievementDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAAAchievementDataSource.m; path = "Gamify Example/AAAAchievementDataSource.m"; sourceTree = SOURCE_ROOT; };
 		EC4AF80D18AC16FC006BE661 /* Gamify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gamify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC4AF81018AC16FC006BE661 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EC4AF81218AC16FC006BE661 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		EC4AF81418AC16FC006BE661 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		EC4AF81818AC16FC006BE661 /* Gamify-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Gamify-Info.plist"; sourceTree = "<group>"; };
-		EC4AF81A18AC16FC006BE661 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		EC4AF81C18AC16FC006BE661 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EC4AF81E18AC16FC006BE661 /* Gamify-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gamify-Prefix.pch"; sourceTree = "<group>"; };
 		EC4AF81F18AC16FC006BE661 /* AAAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAAAppDelegate.h; sourceTree = "<group>"; };
 		EC4AF82018AC16FC006BE661 /* AAAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAAAppDelegate.m; sourceTree = "<group>"; };
-		EC4AF82818AC16FC006BE661 /* AAAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAAViewController.h; sourceTree = "<group>"; };
-		EC4AF82918AC16FC006BE661 /* AAAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAAViewController.m; sourceTree = "<group>"; };
-		EC4AF82B18AC16FC006BE661 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EC4AF83118AC16FC006BE661 /* GamifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GamifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC4AF83218AC16FC006BE661 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		EC4AF83A18AC16FC006BE661 /* GamifyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GamifyTests-Info.plist"; sourceTree = "<group>"; };
@@ -69,10 +72,6 @@
 		EC4AF84F18AC1C54006BE661 /* AAAScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAAScoreViewController.m; path = Gamify/AAAScoreViewController.m; sourceTree = "<group>"; };
 		EC4AF85118AC2011006BE661 /* AAAMainPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAAMainPlayer.h; path = Gamify/AAAMainPlayer.h; sourceTree = "<group>"; };
 		EC4AF85218AC2011006BE661 /* AAAMainPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAAMainPlayer.m; path = Gamify/AAAMainPlayer.m; sourceTree = "<group>"; };
-		ECA571B118DB93F900AC54AA /* AAAAchievementDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAAAchievementDataSource.h; sourceTree = "<group>"; };
-		ECA571B918DB950600AC54AA /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
-		ECA571BA18DB950600AC54AA /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
-		ECA571BD18DB955C00AC54AA /* AAAAchievementDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAAAchievementDataSource.m; sourceTree = "<group>"; };
 		ECA9763B18AD6A4100703BB3 /* AAAAChievement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAAAChievement.h; path = Gamify/AAAAChievement.h; sourceTree = "<group>"; };
 		ECA9763C18AD6A4100703BB3 /* AAAAChievement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAAAChievement.m; path = Gamify/AAAAChievement.m; sourceTree = "<group>"; };
 		ECA9763E18AD705200703BB3 /* AAAAchievmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAAAchievmentViewController.h; path = Gamify/AAAAchievmentViewController.h; sourceTree = "<group>"; };
@@ -114,6 +113,16 @@
 			name = Gamify;
 			sourceTree = "<group>";
 		};
+		EC43C71E18E22F5600C56B17 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				EC43C71F18E22F5600C56B17 /* Main_iPad.storyboard */,
+				EC43C72118E22F5600C56B17 /* Main_iPhone.storyboard */,
+			);
+			name = Base.lproj;
+			path = "Gamify Example/Base.lproj";
+			sourceTree = SOURCE_ROOT;
+		};
 		EC4AF80418AC16FC006BE661 = {
 			isa = PBXGroup;
 			children = (
@@ -150,28 +159,18 @@
 			children = (
 				EC4AF81F18AC16FC006BE661 /* AAAAppDelegate.h */,
 				EC4AF82018AC16FC006BE661 /* AAAAppDelegate.m */,
-				ECA571B918DB950600AC54AA /* Main_iPhone.storyboard */,
-				ECA571BA18DB950600AC54AA /* Main_iPad.storyboard */,
-				EC4AF82818AC16FC006BE661 /* AAAViewController.h */,
-				EC4AF82918AC16FC006BE661 /* AAAViewController.m */,
-				ECA571B118DB93F900AC54AA /* AAAAchievementDataSource.h */,
-				ECA571BD18DB955C00AC54AA /* AAAAchievementDataSource.m */,
-				EC4AF82B18AC16FC006BE661 /* Images.xcassets */,
-				EC4AF81718AC16FC006BE661 /* Supporting Files */,
+				EC43C71C18E22F5600C56B17 /* AAAViewController.h */,
+				EC43C71D18E22F5600C56B17 /* AAAViewController.m */,
+				EC43C72918E22F5600C56B17 /* AAAAchievementDataSource.h */,
+				EC43C72A18E22F5600C56B17 /* AAAAchievementDataSource.m */,
+				EC43C71618E22F5600C56B17 /* Gamify-Info.plist */,
+				EC43C71718E22F5600C56B17 /* Gamify-Prefix.pch */,
+				EC43C71A18E22F5600C56B17 /* main.m */,
+				EC43C71B18E22F5600C56B17 /* Images.xcassets */,
+				EC43C71E18E22F5600C56B17 /* Base.lproj */,
 			);
 			name = "Gamify Example";
 			path = Gamify;
-			sourceTree = "<group>";
-		};
-		EC4AF81718AC16FC006BE661 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				EC4AF81818AC16FC006BE661 /* Gamify-Info.plist */,
-				EC4AF81918AC16FC006BE661 /* InfoPlist.strings */,
-				EC4AF81C18AC16FC006BE661 /* main.m */,
-				EC4AF81E18AC16FC006BE661 /* Gamify-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		EC4AF83818AC16FC006BE661 /* GamifyTests */ = {
@@ -265,7 +264,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = AAA;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Haaakon Bogen";
 				TargetAttributes = {
 					EC4AF83018AC16FC006BE661 = {
@@ -297,10 +296,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC4AF82C18AC16FC006BE661 /* Images.xcassets in Resources */,
-				ECA571BC18DB950600AC54AA /* Main_iPad.storyboard in Resources */,
-				EC4AF81B18AC16FC006BE661 /* InfoPlist.strings in Resources */,
-				ECA571BB18DB950600AC54AA /* Main_iPhone.storyboard in Resources */,
+				EC43C72F18E22F5600C56B17 /* Images.xcassets in Resources */,
+				EC43C73218E22F5600C56B17 /* Main_iPhone.storyboard in Resources */,
+				EC43C73118E22F5600C56B17 /* Main_iPad.storyboard in Resources */,
+				EC43C72B18E22F5600C56B17 /* Gamify-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,16 +319,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECFDBE2B18C626C00075B428 /* AAAAchievementManager.m in Sources */,
-				ECA571BE18DB955C00AC54AA /* AAAAchievementDataSource.m in Sources */,
+				EC43C73618E22F5600C56B17 /* AAAAchievementDataSource.m in Sources */,
 				EC4AF82118AC16FC006BE661 /* AAAAppDelegate.m in Sources */,
 				EC4AF85318AC2011006BE661 /* AAAMainPlayer.m in Sources */,
-				EC4AF82A18AC16FC006BE661 /* AAAViewController.m in Sources */,
-				EC4AF81D18AC16FC006BE661 /* main.m in Sources */,
 				EC4AF84D18AC1BAE006BE661 /* AAAGamificationManager.m in Sources */,
 				EC4AF84A18AC1B58006BE661 /* AAAScoreView.m in Sources */,
 				EC4AF85018AC1C54006BE661 /* AAAScoreViewController.m in Sources */,
 				ECA9764018AD705200703BB3 /* AAAAchievmentViewController.m in Sources */,
+				EC43C72E18E22F5600C56B17 /* main.m in Sources */,
 				ECA9763D18AD6A4100703BB3 /* AAAAChievement.m in Sources */,
+				EC43C73018E22F5600C56B17 /* AAAViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,12 +351,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EC4AF81918AC16FC006BE661 /* InfoPlist.strings */ = {
+		EC43C71F18E22F5600C56B17 /* Main_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EC4AF81A18AC16FC006BE661 /* en */,
+				EC43C72018E22F5600C56B17 /* Base */,
 			);
-			name = InfoPlist.strings;
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		EC43C72118E22F5600C56B17 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC43C72218E22F5600C56B17 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		EC4AF83B18AC16FC006BE661 /* InfoPlist.strings */ = {
@@ -375,7 +382,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -415,7 +421,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -451,8 +456,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Gamify/Gamify-Prefix.pch";
-				INFOPLIST_FILE = "Gamify/Gamify-Info.plist";
+				GCC_PREFIX_HEADER = "Gamify Example/Gamify-Prefix.pch";
+				INFOPLIST_FILE = "Gamify Example/Gamify-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -464,8 +469,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Gamify/Gamify-Prefix.pch";
-				INFOPLIST_FILE = "Gamify/Gamify-Info.plist";
+				GCC_PREFIX_HEADER = "Gamify Example/Gamify-Prefix.pch";
+				INFOPLIST_FILE = "Gamify Example/Gamify-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -474,7 +479,6 @@
 		EC4AF84618AC16FC006BE661 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Gamify.app/Gamify";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -497,7 +501,6 @@
 		EC4AF84718AC16FC006BE661 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Gamify.app/Gamify";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

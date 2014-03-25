@@ -142,9 +142,9 @@ const NSString  *kScoreToSetKey = @"scoreToSetKey";
         [timer fire];
         self.incrementingTimer = timer;
         if (change > 0) {
-            self.scoreChangeLabel.text = [NSString stringWithFormat:@"+%ld",change];
+            self.scoreChangeLabel.text = [NSString stringWithFormat:@"+%ld",(long)change];
         }else {
-            self.scoreChangeLabel.text = [NSString stringWithFormat:@"%ld",change];
+            self.scoreChangeLabel.text = [NSString stringWithFormat:@"%ld",(long)change];
         }
     });
 }
