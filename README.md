@@ -1,6 +1,6 @@
 Gamify
 ======
-[![Build Status](https://travis-ci.org/haaakon/Gamify.png)](https://travis-ci.org/haaakon/Gamify)
+[![Build Status](https://travis-ci.org/haaakon/Gamify.svg?branch=master)](https://travis-ci.org/haaakon/Gamify)
 
 The simplest way of adding gamification to your app!
 
