@@ -13,7 +13,14 @@
 
 @property (nonatomic,weak) AAAScoreView *scoreView;
 
-+ (AAAGamificationManager *)sharedManager;
++ (AAAGamificationManager *)sharedManager; 
+/**
+ *  Sets the scoreview to update whenever the main players score
+ *  changes.
+ *
+ *  @param scoreview that should show the players score
+ */
+- (void)setScoreView:(AAAScoreView *)scoreView;
 /**
  *  Sets score as the main players current score, 
  *  disregarding what the score was previously

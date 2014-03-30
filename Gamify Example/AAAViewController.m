@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
     [AAAAchievementManager sharedManager].dataSource = [[AAAAchievementDataSource alloc] init];
-    [[AAAGamificationManager sharedManager]setScoreView:self.scoreView];
+    [[AAAGamificationManager sharedManager] setScoreView:self.scoreView];
 }
 
 - (IBAction)didTapSetScoreButton:(id)sender {
