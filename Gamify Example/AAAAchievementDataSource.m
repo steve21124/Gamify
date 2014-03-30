@@ -14,10 +14,10 @@ NSString *const kPenguinAchievementKey = @"penguin";
 - (AAAAchievement *)achievementForKey:(NSString *)key
 {
     if ([key isEqualToString:kForestStarAchievementKey]) {
-        AAAAchievement *achievement = [[AAAAchievement alloc] initWithKey:@"" titleText:NSLocalizedString(@"Forest star", @"") descriptionText:NSLocalizedString(@"All forest star questions mastered. Congratulations", @"") image:[UIImage imageNamed:@"forest"]];
+        AAAAchievement *achievement = [[AAAAchievement alloc] initWithTitleText:NSLocalizedString(@"Forest star", @"") descriptionText:NSLocalizedString(@"All forest star questions mastered. Congratulations", @"") image:[UIImage imageNamed:@"forest"]];
         return achievement;
     } else if ([key isEqualToString:kPenguinAchievementKey]) {
-        AAAAchievement *achievement = [[AAAAchievement alloc] initWithKey:@"" titleText:NSLocalizedString(@"Blue penguin", @"") descriptionText:NSLocalizedString(@"You got all penguin related questions correct.", @"") image:[UIImage imageNamed:@"penguin"]];
+        AAAAchievement *achievement = [[AAAAchievement alloc] initWithTitleText:NSLocalizedString(@"Blue penguin", @"") descriptionText:NSLocalizedString(@"You got all penguin related questions correct.", @"") image:[UIImage imageNamed:@"penguin"]];
         return achievement;
     } else if ([key isEqualToString:kPenguinAchievementKey]) {
         

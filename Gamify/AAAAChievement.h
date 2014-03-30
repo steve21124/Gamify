@@ -10,12 +10,10 @@
 
 @interface AAAAchievement : NSObject<NSCoding>
 
-
-@property (nonatomic,strong, readonly) NSString   *key;
 @property (nonatomic,strong, readonly) NSString   *titleText;
 @property (nonatomic,strong, readonly) NSString   *descriptionText;
 @property (nonatomic,strong, readonly) UIImage    *image;
 
-- (AAAAchievement*)initWithKey:(NSString *)key titleText:(NSString*)titleText descriptionText:(NSString*)descriptionText image:(UIImage*)image;
+- (AAAAchievement*)initWithTitleText:(NSString*)titleText descriptionText:(NSString*)descriptionText image:(UIImage*)image;
 
 @end
