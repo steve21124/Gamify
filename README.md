@@ -4,19 +4,34 @@ Gamify
 The simplest way of adding gamification to your app!
 
 ##Features:
-- Stores the players score and can show it anywhere in the app
-- Animated adding and subracting to the score
+- Score view with animations for adding/subtracting score
+- Persisently stores the main players score 
 - Easy to set up achievements which can be triggered whenever you want
 
 
 ![shows how its done](https://github.com/haaakon/Gamify/blob/master/v0.0.2.gif?raw=true)
+
+## Main Classes
+
+### AAAScoreView 
+A customizeable view with a label that represents a score. When the score of the view is changed, a second label
+will appear briefly floating above the score label indicating the change in score.
+
+### AAAGamificationManager
+Persisently keeps track of the main players score. If you set a score view for it, it will automatically update 
+that score view whenever the main players score changes
+
+### AAAAchievementManager 
+Can show achievements modally from any location in your app. 
+
+
 ##Example code
 
 ### Add to score
-Without knowing what score is, just add to existing score
+First chose a score view that will update when the main players score changes. Then add to main players score.
 ```
-    NSInteger pointsToAdd = self.addScoreTextField.text.integerValue;
-    [[AAAGamificationManager sharedManager] addToMainPlayerScore:pointsToAdd];
+[[AAAGamificationManager sharedManager] setScoreView:self.scoreView];
+[[AAAGamificationManager sharedManager] addToMainPlayerScore:pointsToAdd];
 ```
 
 ###Set score
@@ -27,11 +42,24 @@ NSInteger scoreToSet = self.addScoreTextField.text.integerValue;
 ```
 
 ### Trigger achievement viewer
+Shows a modal view of the achievement view controller on top of the view controller given in the argument. The achievement key is gotten from the achievement data source.
 ```
-AAAAchievement *achievement = [[AAAAchievement alloc] initWithKey:@"" titleText:NSLocalizedString(@"Blue penguin", @"") descriptionText:NSLocalizedString(@"You got all penguin related questions correct.", @"") image:[UIImage imageNamed:@"forest"]];
-[[AAAGamificationManager sharedManager] showAchievementViewControllerOnViewController:self withAchievement:achievement];
+[[AAAAchievementManager sharedManager] showAchievementViewControllerOnViewController:self
+achievementKey:kForestStarAchievementKey];
+
+// Achievement DataSource
+- (AAAAchievement *)achievementForKey:(NSString *)key
+{
+    if ([key isEqualToString:kForestStarAchievementKey]) {
+        AAAAchievement *achievement = [[AAAAchievement alloc] initWitTitleText:NSLocalizedString(@"Forest star", @"") descriptionText:NSLocalizedString(@"All forest star questions mastered. Congratulations", @"") image:[UIImage imageNamed:@"forest"]];
+        return achievement;
+}
 
 ```
+
+
+
+
 #TODO
 - Achievement list
 
