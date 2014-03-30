@@ -9,13 +9,14 @@ The simplest way of adding gamification to your app!
 - Easy to set up achievements which can be triggered whenever you want
 
 
-![shows how its done](https://github.com/haaakon/Gamify/blob/master/v0.0.2.gif?raw=true)
+![Gamify example](https://raw.githubusercontent.com/haaakon/Gamify/master/readme-files/gamify.gif)
 
 ## Main Classes
 
 
 ### AAAScoreView 
 ![Score view](https://raw.githubusercontent.com/haaakon/Gamify/master/readme-files/scoreview.gif)
+
 A customizeable view with a label that represents a score. When the score of the view is changed, a second label
 will appear briefly floating above the score label indicating the change in score.
 
