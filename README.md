@@ -32,33 +32,8 @@ AAAAchievement *achievement = [[AAAAchievement alloc] initWithKey:@"" titleText:
 [[AAAGamificationManager sharedManager] showAchievementViewControllerOnViewController:self withAchievement:achievement];
 
 ```
-##Upcoming
-- More ways of customizing ui
-- Show List of achievements gotten
-- Dont give out achievements double to a player
-- 
-
-##Theory
-Adding gamification to your app is more than just adding a score screen and achievements, it has to be meaningful for the user. Here are some quick points which are key in making a good gamified experience. Games are fun, your gamification experience, also has to be, fun.
-### Quick tips
-
-#### Problem solving
-Present problems to the user which get harder and harder as the game progresses. Example: 
-#### Role playing
-Let the user imagine being someone else, give them an avatar or similar. Example Wii mii, The Sims
-#### Recognition
-Recognize when the user has put some effort down. Example: Achievements, leveling up
-#### Surprise
-Suprise the user with something they did not expect. Example: Bonus levels, hidden objects
-#### Triumphing
-Let the user gravitate towards some goal and then triumph when they are victorious. Example: Boss fight, final level. 
-#### Cooperation
-If your app can let two players cooperate towards a goal. Example:
-#### Collection
-Your app lets the user collect objects or similar, example coins, gems, achievements. Show the collection as a whole to the user and let other users watch the impressive collection
-#### Goof off (sandbox)
-To extend gameplay, and let the user play around with the app just for fun. Example: Sandbox mode in games, free play 
-
+#TODO
+- Achievement list
 
 
 ## License
